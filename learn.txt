@@ -1,0 +1,32 @@
+1，安装
+$ curl https://sh.rustup.rs -sSf | sh
+$ source $HOME/.cargo/env
+#########
+$ export PATH="$HOME/.cargo/bin:$PATH"
+
+$ rustc --version
+
+2，编译
+$ rustc main.rs
+$ ./main
+Hello, world!
+
+3, 执行
+./main
+
+4,风格
+	4 space 缩进
+	函数！= 宏
+	每行；结尾
+
+5，包管理
+   版本：cargo --version
+   create new：cargo new hello_cargo
+   build  new: cargo build
+   exec   new: ./target/debug/hello_cargo
+   run    new: cargo run
+   check  new: cargo check
+
+6,Cargo 对外部 crate 的运用是其真正闪光的地方。在我们使用 rand编写代码之前，需要修改Cargo.toml 文件，引入一个 rand
+依赖。现在打开这个文件并在底部的 [dependencies] 片段标题
+之下添加,将 rand 添加为依赖之后运行 cargo build
